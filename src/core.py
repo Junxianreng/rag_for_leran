@@ -14,8 +14,8 @@ except ImportError:
 
 # 基础配置
 CONFIG = {
-    "zhipu_api_key": "71bd9bd170814bfbaabe97721d055f83.ib63bab7y2X8PQJV",  # 替换为你的key
-    "embedding_model_path": r"D:\python_work\master\1\backend\models\bge-large-zh-v1.5",
+    "zhipu_api_key": "your_keys",  # 替换为你的key
+    "embedding_model_path": r"D:\python_work\master\1\backend\models\bge-large-zh-v1.5",# orther_embedding_model
     "persist_path": os.path.join(os.path.dirname(os.path.abspath(__file__)), "storage"),
     "device": "cpu",  # 有GPU改cuda
     # 支持切换的模型配置（含温度参数）
@@ -37,7 +37,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from langchain_community.chat_models import ChatZhipuAI
+from langchain_community.chat_models import ChatZhipuAI # 其他模型需换结构
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 # 关闭Chroma遥测
